@@ -9,11 +9,21 @@
 import React from 'react';
 import type {Node} from 'react';
 import {
+  ActivityIndicator,
+  FlatList,
+  ImageBackground,
+  KeyboardAvoidingView,
+  Modal,
+  Pressable,
   SafeAreaView,
   ScrollView,
+  SectionList,
   StatusBar,
   StyleSheet,
+  Switch,
   Text,
+  TextInput,
+  TouchableHighlight,
   useColorScheme,
   View,
 } from 'react-native';
@@ -65,27 +75,28 @@ const App: () => Node = () => {
       <ScrollView
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
+          <View>
+            <Text>
+              Text
+            </Text>
+          </View>
+          <Text>
+            Text
+          </Text>
+          <TextInput />
+          
+          <Section></Section>
+          <ActivityIndicator />
+          {/* <Image /> */}
+          {/* <ImageBackground /> */}
+          <KeyboardAvoidingView />
+          {/* <Modal /> */}
+          <Switch />
+          <Pressable><Text>hi</Text></Pressable>
+          {/* <Button><Text>button</Text></Button> */}
       </ScrollView>
+      <FlatList />
+      {/* <SectionList /> */}
     </SafeAreaView>
   );
 };
